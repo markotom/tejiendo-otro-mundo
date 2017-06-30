@@ -1,0 +1,17 @@
+{
+  "name": "tejiendo-otro-mundo",
+  "version": "0.0.1",
+  "description": "Tejiendo Otro Mundo",
+  "main": "app.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markotom/tejiendo-otro-mundo.git"
+  },
+  "author": "Marco Godínez <markotom@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/markotom/tejiendo-otro-mundo/issues"
+  },
+  "homepage": "https://github.com/markotom/tejiendo-otro-mundo#readme"
+}
