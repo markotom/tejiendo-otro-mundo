@@ -13,5 +13,35 @@
   "bugs": {
     "url": "https://github.com/markotom/tejiendo-otro-mundo/issues"
   },
-  "homepage": "https://github.com/markotom/tejiendo-otro-mundo#readme"
+  "homepage": "https://github.com/markotom/tejiendo-otro-mundo#readme",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015-node": "^6.1.1",
+    "browser-sync": "^2.18.12",
+    "chalk": "^2.0.1",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^3.5.0",
+    "gulp-file-cache": "0.0.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-size": "^2.1.0",
+    "gulp-uncss": "^1.0.6"
+  },
+  "dependencies": {
+    "koa": "^2.3.0",
+    "koa-joi-router": "^5.0.0",
+    "koa-jwt": "^3.2.2",
+    "koa-logger": "^3.0.1",
+    "koa-session": "^5.3.0",
+    "koa-static": "^3.0.0",
+    "koa-views": "^6.0.2",
+    "mongoose": "^4.11.0",
+    "nunjucks": "^3.0.1",
+    "redis": "^2.7.1",
+    "winston": "^2.3.1"
+  }
 }
