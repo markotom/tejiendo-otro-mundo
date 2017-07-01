@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <title>Tejiendo Otro Mundo</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Marco Godínez (https://about.me/markotom)>">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  {% if app.env === 'production' %}
+  <link rel="stylesheet" href="/css/app.min.css">
+  {% else %}
+  <link rel="stylesheet" href="/css/app.css">
+  {% endif %}
+</head>
+
+<body>
+  {% block content %}{% endblock %}
+</body>
+</html>
