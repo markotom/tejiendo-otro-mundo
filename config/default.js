@@ -1,4 +1,4 @@
-export const config = {
+export default {
   server: {
     port: process.env.PORT || 1337
   },
