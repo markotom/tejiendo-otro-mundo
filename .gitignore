@@ -5,6 +5,7 @@ node_modules
 # Built
 dist
 public/css
+public/js
 
 # Configuration
 config/test.js

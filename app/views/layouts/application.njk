@@ -33,5 +33,11 @@
   </section>
 
   {% block content %}{% endblock %}
+
+  {% if app.env === 'production' %}
+  <script type="text/javascript" src="/js/app.min.js"></script>
+  {% else %}
+  <script type="text/javascript" src="/js/app.js"></script>
+  {% endif %}
 </body>
 </html>
