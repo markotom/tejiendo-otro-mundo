@@ -3,8 +3,7 @@ import { reload } from 'browser-sync'
 
 export default {
   deps: [
-    'clean',
-    'compile',
+    'serve',
     'styles'
   ],
   fn () {
