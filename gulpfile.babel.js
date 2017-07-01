@@ -78,11 +78,11 @@ gulp.task('compile:js', () => {
 })
 
 /**
- * Styles task
+ * Compile SCSS task
  */
-gulp.task('styles', () => {
+gulp.task('compile:scss', () => {
   return src([
-    'app/styles/app.scss'
+    'app/assets/css/app.scss'
   ])
   .pipe(sass({
     outputStyle: 'expand'
@@ -141,8 +141,8 @@ gulp.task('clean', ['clean:server', 'clean:assets'])
 /**
  * Watch task
  */
-gulp.task('watch', ['serve', 'browser:sync', 'compile:js', 'styles'], () => {
+gulp.task('watch', ['serve', 'browser:sync', 'compile:js', 'compile:scss'], () => {
   gulp.watch(['app/views/**/*.njk'], reload)
   gulp.watch(['app/assets/js/**/*.js'], ['compile:js'])
-  gulp.watch(['app/styles/**/*.scss'], ['styles'])
+  gulp.watch(['app/assets/css/**/*.scss'], ['compile:scss'])
 })
