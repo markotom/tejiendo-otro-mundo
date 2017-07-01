@@ -45,7 +45,7 @@ gulp.task('compile', () => {
  */
 gulp.task('styles', () => {
   return src([
-    'app/views/styles/app.scss'
+    'app/styles/app.scss'
   ])
   .pipe(sass({
     outputStyle: 'expand'
@@ -101,5 +101,5 @@ gulp.task('clean', ['clean:server', 'clean:assets'])
  */
 gulp.task('watch', ['serve', 'browser:sync', 'styles'], () => {
   gulp.watch(['app/views/**/*.njk'], reload)
-  gulp.watch(['app/views/**/*.scss'], ['styles'])
+  gulp.watch(['app/styles/**/*.scss'], ['styles'])
 })
