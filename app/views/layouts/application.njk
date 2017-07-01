@@ -7,6 +7,7 @@
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css">
   
   {% if app.env === 'production' %}
   <link rel="stylesheet" href="/css/app.min.css">
@@ -16,6 +17,21 @@
 </head>
 
 <body>
+  <section class="hero is-fullheight is-dark has-text-centered" id="section-main">
+    <div class="gallery"></div>
+
+    <div class="hero-body">
+      <div class="container">
+        <div class="logo">
+          <img src='/img/logo.svg' alt='' />
+        </div>
+
+        <h1 class="title">{{ app.name }}</h1>
+        <h2 class="subtitle">{{ app.description }}</h2>
+      </div>
+    </div>
+  </section>
+
   {% block content %}{% endblock %}
 </body>
 </html>

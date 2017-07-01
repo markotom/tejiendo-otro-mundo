@@ -1,0 +1,52 @@
+$logo-width: 200px;
+
+#section-main {
+  position: relative;
+
+  .logo {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+    width: $logo-width;
+
+    img {
+      position: relative;
+      width: $logo-width;
+    }
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 100%;
+      transform: translateY(-50%) translateX(-50%);
+      display: block;
+      width: $logo-width / 1.2;
+      height: $logo-width / 1.2;
+      content: '';
+      box-shadow: 0 0 20px 0 rgba(0,0,0,0.6);
+    }
+  }
+
+  .gallery {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(http://www.guiamandalas.com.ar/wp-content/uploads/2016/02/6a00d8341bfb1653ef01b8d0f54737970c.png);
+    background-size: cover;
+
+    &:after {
+      opacity: .4;
+
+      position: absolute;
+      display: block;
+      content: '';
+      background: #000;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
