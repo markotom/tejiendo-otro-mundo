@@ -1,5 +1,5 @@
 import { defaultsDeep } from 'lodash'
-import { config as defaults } from 'config/default'
+import defaults from 'config/default'
 
 const env = process.env.NODE_ENV
 
