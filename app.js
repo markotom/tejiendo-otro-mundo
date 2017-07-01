@@ -36,6 +36,24 @@ const app = new Koa()
 .use(serve('public'))
 
 /**
+ * Set local variables
+ */
+.use(async (ctx, next) => {
+  const { env } = ctx.app
+
+  ctx.state = {
+    app: {
+      env,
+      name: 'Tejiendo Otro Mundo',
+      description: 'Visibilizar y socializar las problemáticas que enfrentan las poblaciones vulnerables'
+    },
+    ...ctx.state
+  }
+
+  await next()
+})
+
+/**
  * Set routes
  */
 .use(main.middleware())
