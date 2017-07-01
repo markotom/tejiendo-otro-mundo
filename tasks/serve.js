@@ -9,7 +9,7 @@ export default {
       ext: 'js',
       ignore: [
         'dist',
-        'test',
+        'tasks',
         'node_modules'
       ],
       tasks: ['compile'],

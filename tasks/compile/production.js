@@ -1,7 +1,6 @@
-import { src, dest } from 'gulp'
 import babel from 'gulp-babel'
 
-export default () => {
+export default ({ src, dest }) => {
   return src([
     'app/**/*.js',
     'config{,/**/*.js}',
