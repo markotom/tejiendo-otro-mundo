@@ -36,6 +36,9 @@
     "gulp-size": "^2.1.0",
     "gulp-uncss": "^1.0.6",
     "gulp-webpack": "^1.5.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-transition-group": "^1.2.0",
     "webpack": "^3.0.0"
   },
   "dependencies": {
