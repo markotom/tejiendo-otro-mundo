@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'
+import Rellax from 'rellax'
 
 /**
  * Gallery Component
@@ -14,6 +15,7 @@ class Gallery extends Component {
     this.state = {
       slides: [
         'http://www.guiamandalas.com.ar/wp-content/uploads/2016/02/6a00d8341bfb1653ef01b8d0f54737970c.png',
+        'https://tejiendomalasana.files.wordpress.com/2013/12/tejiendo-malasac3b1a1.jpg',
         'http://oi64.tinypic.com/30vizc0.jpg'
       ],
       counter: 0
@@ -21,8 +23,10 @@ class Gallery extends Component {
   }
 
   componentDidMount () {
+    let parallax = new Rellax('.gallery-content', { center: true, speed: -5 })
+
     let timer = setInterval(this.timer.bind(this), 10000)
-    this.setState({ timer })
+    this.setState({ timer, parallax })
   }
 
   componentWillUnmount () {
@@ -37,7 +41,7 @@ class Gallery extends Component {
 
   render () {
     return (
-      <div className='gallery-content'>
+      <div ref='parallax' className='gallery-content'>
         <CSSTransitionGroup
           transitionName='slide'
           transitionEnterTimeout={1000}
@@ -46,9 +50,9 @@ class Gallery extends Component {
           transitionAppear>
           <div
             className='gallery-item'
-            key={this.state.counter}
-            style={{ backgroundImage: `url(${this.state.slides[this.state.counter]})` }}
-          />
+            key={this.state.counter}>
+            <img src={this.state.slides[this.state.counter]} alt='' />
+          </div>
         </CSSTransitionGroup>
       </div>
     )
