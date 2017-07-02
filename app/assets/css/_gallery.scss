@@ -1,0 +1,65 @@
+.gallery {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.gallery-content {
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  /**
+    Avoid jumping of background image on Chrome IOS
+    http://stackoverflow.com/questions/24944925/background-image-jumps-when-address-bar-hides-ios-android-mobile-chrome
+  */
+  transition: height 999999s;
+
+  &:after {
+    opacity: .4;
+
+    position: absolute;
+    display: block;
+    content: '';
+    background: #000;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.gallery-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: 100% cover;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /**
+    Avoid jumping of background image on Chrome IOS
+    http://stackoverflow.com/questions/24944925/background-image-jumps-when-address-bar-hides-ios-android-mobile-chrome
+  */
+  transition: height 999999s;
+}
+
+.slide-enter {
+  opacity: 0.01;
+}
+
+.slide-enter.slide-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease;
+}
+
+.slide-leave {
+  opacity: 1;
+}
+
+.slide-leave.slide-leave-active {
+  opacity: 0.01;
+  transition: opacity 1000ms ease;
+}

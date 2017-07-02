@@ -1,3 +1,5 @@
+@import 'gallery';
+
 $logo-width: 200px;
 
 #section-main {
@@ -26,27 +28,6 @@ $logo-width: 200px;
       height: $logo-width / 1.2;
       content: '';
       box-shadow: 0 0 20px 0 rgba(0,0,0,0.6);
-    }
-  }
-
-  .gallery {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url(http://www.guiamandalas.com.ar/wp-content/uploads/2016/02/6a00d8341bfb1653ef01b8d0f54737970c.png);
-    background-size: cover;
-
-    &:after {
-      opacity: .4;
-
-      position: absolute;
-      display: block;
-      content: '';
-      background: #000;
-      height: 100%;
-      width: 100%;
     }
   }
 }
