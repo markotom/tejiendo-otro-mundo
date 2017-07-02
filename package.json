@@ -23,6 +23,7 @@
     "babel-preset-es2015-node": "^6.1.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "bootstrap": "^4.0.0-alpha.6",
     "browser-sync": "^2.18.12",
     "chalk": "^2.0.1",
     "del": "^3.0.0",
@@ -38,7 +39,9 @@
     "gulp-webpack": "^1.5.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-parallax": "^1.4.2",
     "react-transition-group": "^1.2.0",
+    "rellax": "^1.0.0",
     "webpack": "^3.0.0"
   },
   "dependencies": {
