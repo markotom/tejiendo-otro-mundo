@@ -1,15 +1,23 @@
+@import "bootstrap/bootstrap";
+
+@import 'variables';
 @import 'gallery';
 
-$logo-width: 200px;
+html { -webkit-font-smoothing: antialiased; }
 
-#section-main {
+.container { height: 100%; }
+
+.jumbotron {
   position: relative;
+  padding-top: $spacer * 6;
+  height: 100vh;
+  background: black;
 
   .logo {
     position: relative;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 40px;
+    margin-bottom: $spacer * 3;
     width: $logo-width;
 
     img {
@@ -29,5 +37,36 @@ $logo-width: 200px;
       content: '';
       box-shadow: 0 0 20px 0 rgba(0,0,0,0.6);
     }
+  }
+
+  .caption,
+  .actions { text-align: center; }
+
+  .caption {
+    text-shadow: 1px 1px 5px black;
+    color: lighten($gray, 60);
+
+    .title { color: #fff; }
+  }
+
+  .actions {
+    margin-top: $spacer * 2;
+  }
+}
+
+#navbar-main {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  background: transparent;
+
+  .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .navbar-collapse {
+    margin: 0 -$spacer;
+    padding: $spacer;
+    background: red;
   }
 }

@@ -1,0 +1,28 @@
+.navbar-light { background: transparent; }
+.navbar-toggler { border: 0; }
+
+.btn {
+  border-width: 3px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-variant: small-caps;
+  text-transform: uppercase;
+}
+
+.btn-secondary {
+  @include transition(background-color .2s ease-in-out);
+
+  &:focus,
+  &.focus {
+    color: $gray-dark;
+    background-color: $btn-secondary-border;
+    border-color: $btn-secondary-border;
+  }
+
+  &:hover {
+    color: $gray-dark;
+    background-color: $btn-secondary-border;
+    border-color: $btn-secondary-border;
+  }
+}
+

@@ -7,7 +7,7 @@
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
   
   {% if app.env === 'production' %}
   <link rel="stylesheet" href="/css/app.min.css">
@@ -17,21 +17,15 @@
 </head>
 
 <body>
-  <section class="hero is-fullheight is-dark has-text-centered" id="section-main">
-    <div class="gallery" id="gallery"></div>
+  {# Carousel #}
+  <div class="rellax" data-rellax-speed='-7'>
+    {% include "gallery.njk" %}
+  </div>
 
-    <div class="hero-body">
-      <div class="container">
-        <div class="logo">
-          <img src='/img/logo.svg' alt='' />
-        </div>
+  {# Main Navigation #}
+  {% include "navbar.njk" %}
 
-        <h1 class="title">{{ app.name }}</h1>
-        <h2 class="subtitle">{{ app.description }}</h2>
-      </div>
-    </div>
-  </section>
-
+  {# Main Content #}
   {% block content %}{% endblock %}
 
   {% if app.env === 'production' %}
