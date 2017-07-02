@@ -16,7 +16,7 @@
     Avoid jumping of background image on Chrome IOS
     http://stackoverflow.com/questions/24944925/background-image-jumps-when-address-bar-hides-ios-android-mobile-chrome
   */
-  transition: height 999999s;
+  @include transition(height 999999s);
 
   &:after {
     opacity: .4;
@@ -43,23 +43,25 @@
     Avoid jumping of background image on Chrome IOS
     http://stackoverflow.com/questions/24944925/background-image-jumps-when-address-bar-hides-ios-android-mobile-chrome
   */
-  transition: height 999999s;
+  @include transition(height 999999s);
 }
 
 .slide-enter {
   opacity: 0.01;
+  @include transition(opacity 1000ms ease);
 }
 
 .slide-enter.slide-enter-active {
   opacity: 1;
-  transition: opacity 1000ms ease;
+  @include transition(opacity 1000ms ease);
 }
 
 .slide-leave {
   opacity: 1;
+  @include transition(opacity 1000ms ease);
 }
 
 .slide-leave.slide-leave-active {
   opacity: 0.01;
-  transition: opacity 1000ms ease;
+  @include transition(opacity 1000ms ease);
 }
